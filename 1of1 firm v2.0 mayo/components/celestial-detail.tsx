@@ -93,13 +93,10 @@ export default function CelestialDetail({ onNavigate }: CelestialDetailProps) {
       {/* Early Bird Section */}
       <section className="px-4 py-8 max-w-lg mx-auto">
         {/* Early Bird Label */}
-        <div className="text-center mb-6">
-          <div className="inline-block bg-white/90 text-black px-4 py-1 text-xs tracking-wider">
-            Early bird
-          </div>
-          <div className="inline-block bg-white/90 text-black px-4 py-1 text-xs tracking-wider ml-1">
-            Etapa creyentes
-          </div>
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="h-px bg-amber-500/30 flex-1" />
+          <span className="text-amber-500 text-xs tracking-[0.2em]">EARLY BIRD · ETAPA CREYENTES</span>
+          <div className="h-px bg-amber-500/30 flex-1" />
         </div>
 
         {/* Pricing Cards */}
