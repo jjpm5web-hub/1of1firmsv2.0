@@ -71,14 +71,11 @@ export default function LunaLlenaDetail({ onNavigate }: LunaLlenaDetailProps) {
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 md:p-6 bg-gradient-to-b from-black/80 to-transparent">
-        <div className="text-white">
-          <div className="text-2xl font-bold tracking-tight">
-            <span className="text-amber-400">1</span>
-            <span className="text-xs align-top">OF</span>
-            <span className="text-amber-400">1</span>
-          </div>
-          <div className="text-[10px] tracking-[0.3em] -mt-1">FIRM</div>
-        </div>
+        <img 
+          src="/logo.png" 
+          alt="1 OF 1 FIRM" 
+          className="h-10 md:h-12 w-auto"
+        />
         <button
           onClick={() => setIsMenuOpen(true)}
           className="text-white p-2 hover:text-amber-500 transition-colors"

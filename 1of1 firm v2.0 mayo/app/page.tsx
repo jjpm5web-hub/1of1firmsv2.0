@@ -4,15 +4,18 @@ import { useState } from "react"
 import Menu from "@/components/menu"
 import SignatureEvents from "@/components/signature-events"
 import EventDetail from "@/components/event-detail"
+import LunaLlenaDetail from "@/components/luna-llena-detail"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook">("home")
+  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena">("home")
 
   const handleNavigate = (page: string) => {
     if (page === "events") {
       setCurrentPage("events")
     } else if (page === "babadook") {
       setCurrentPage("babadook")
+    } else if (page === "luna-llena") {
+      setCurrentPage("luna-llena")
     } else {
       setCurrentPage("home")
     }
@@ -22,6 +25,14 @@ export default function Home() {
     return (
       <div>
         <EventDetail onNavigate={handleNavigate} />
+      </div>
+    )
+  }
+
+  if (currentPage === "luna-llena") {
+    return (
+      <div>
+        <LunaLlenaDetail onNavigate={handleNavigate} />
       </div>
     )
   }

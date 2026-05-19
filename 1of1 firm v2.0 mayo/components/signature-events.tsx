@@ -175,6 +175,7 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
     },
     {
       image: "https://images.unsplash.com/photo-1532767153582-b1a0e5145009?w=600&q=80",
+      id: "luna-llena",
       title: "LUNA LLENA",
       subtitle: "RUMBA DE PERREO & REGGAETON",
       dateLabel: "FECHA PRÓXIMAMENTE",
@@ -277,7 +278,7 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
           <EventCard 
             key={index} 
             {...event} 
-            onClick={event.id === "babadook" ? () => handleNavigate("babadook") : undefined}
+            onClick={event.id ? () => handleNavigate(event.id!) : undefined}
           />
         ))}
       </section>
