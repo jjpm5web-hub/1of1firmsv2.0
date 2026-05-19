@@ -197,6 +197,7 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
     },
     {
       image: "https://images.unsplash.com/photo-1504680177321-2e6a879aac86?w=600&q=80",
+      id: "animal",
       title: "ANIMAL",
       subtitle: "MÁS SALVAJE • +14 SIN ALCOHOL",
       date: "SÁBADO 17 DE MAYO",

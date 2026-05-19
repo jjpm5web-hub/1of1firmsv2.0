@@ -6,9 +6,10 @@ import SignatureEvents from "@/components/signature-events"
 import EventDetail from "@/components/event-detail"
 import LunaLlenaDetail from "@/components/luna-llena-detail"
 import LaFestaDetail from "@/components/la-festa-detail"
+import AnimalDetail from "@/components/animal-detail"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa">("home")
+  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa" | "animal">("home")
 
   const handleNavigate = (page: string) => {
     if (page === "events") {
@@ -19,6 +20,8 @@ export default function Home() {
       setCurrentPage("luna-llena")
     } else if (page === "la-festa") {
       setCurrentPage("la-festa")
+    } else if (page === "animal") {
+      setCurrentPage("animal")
     } else {
       setCurrentPage("home")
     }
@@ -44,6 +47,14 @@ export default function Home() {
     return (
       <div>
         <LaFestaDetail onNavigate={handleNavigate} />
+      </div>
+    )
+  }
+
+  if (currentPage === "animal") {
+    return (
+      <div>
+        <AnimalDetail onNavigate={handleNavigate} />
       </div>
     )
   }
