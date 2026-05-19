@@ -52,14 +52,11 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
       <div className="relative z-10 h-full flex flex-col">
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 md:p-6">
-          <div className="text-white">
-            <div className="text-2xl font-bold tracking-tight">
-              <span className="text-amber-400">1</span>
-              <span className="text-[10px] align-top mx-0.5">OF</span>
-              <span className="text-amber-400">1</span>
-            </div>
-            <div className="text-[10px] tracking-[0.3em] -mt-1 text-white/80">FIRM</div>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="1 OF 1 FIRM" 
+            className="h-10 md:h-12 w-auto"
+          />
           <button
             onClick={onClose}
             className="text-white p-2 hover:text-amber-500 transition-colors"
