@@ -95,7 +95,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
                   {signatureEvents.map((item) => (
                     <button
                       key={item}
-                      onClick={() => handleNavigate(item === "LUNA LLENA" ? "luna-llena" : item === "BABADOOK" ? "babadook" : item === "LA FESTA" ? "la-festa" : item === "ANIMAL" ? "animal" : "events")}
+                      onClick={() => handleNavigate(item === "LUNA LLENA" ? "luna-llena" : item === "BABADOOK" ? "babadook" : item === "LA FESTA" ? "la-festa" : item === "ANIMAL" ? "animal" : item === "CELESTIAL" ? "celestial" : "events")}
                       className="block w-full text-white/60 text-sm tracking-[0.15em] hover:text-amber-500 transition-colors py-1"
                     >
                       {item}

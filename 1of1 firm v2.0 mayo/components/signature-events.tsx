@@ -209,6 +209,7 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
     },
     {
       image: "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=600&q=80",
+      id: "celestial",
       title: "MISS 1 OF 1 CELESTIAL",
       subtitle: "CERTAMEN DE BELLEZA + AFTER PARTY",
       location: "BARRANQUILLA",

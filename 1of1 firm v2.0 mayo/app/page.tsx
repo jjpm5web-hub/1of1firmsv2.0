@@ -7,9 +7,10 @@ import EventDetail from "@/components/event-detail"
 import LunaLlenaDetail from "@/components/luna-llena-detail"
 import LaFestaDetail from "@/components/la-festa-detail"
 import AnimalDetail from "@/components/animal-detail"
+import CelestialDetail from "@/components/celestial-detail"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa" | "animal">("home")
+  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa" | "animal" | "celestial">("home")
 
   const handleNavigate = (page: string) => {
     if (page === "events") {
@@ -22,6 +23,8 @@ export default function Home() {
       setCurrentPage("la-festa")
     } else if (page === "animal") {
       setCurrentPage("animal")
+    } else if (page === "celestial") {
+      setCurrentPage("celestial")
     } else {
       setCurrentPage("home")
     }
@@ -55,6 +58,14 @@ export default function Home() {
     return (
       <div>
         <AnimalDetail onNavigate={handleNavigate} />
+      </div>
+    )
+  }
+
+  if (currentPage === "celestial") {
+    return (
+      <div>
+        <CelestialDetail onNavigate={handleNavigate} />
       </div>
     )
   }
