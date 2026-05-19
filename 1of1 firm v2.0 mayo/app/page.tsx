@@ -5,9 +5,10 @@ import Menu from "@/components/menu"
 import SignatureEvents from "@/components/signature-events"
 import EventDetail from "@/components/event-detail"
 import LunaLlenaDetail from "@/components/luna-llena-detail"
+import LaFestaDetail from "@/components/la-festa-detail"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena">("home")
+  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa">("home")
 
   const handleNavigate = (page: string) => {
     if (page === "events") {
@@ -16,6 +17,8 @@ export default function Home() {
       setCurrentPage("babadook")
     } else if (page === "luna-llena") {
       setCurrentPage("luna-llena")
+    } else if (page === "la-festa") {
+      setCurrentPage("la-festa")
     } else {
       setCurrentPage("home")
     }
@@ -33,6 +36,14 @@ export default function Home() {
     return (
       <div>
         <LunaLlenaDetail onNavigate={handleNavigate} />
+      </div>
+    )
+  }
+
+  if (currentPage === "la-festa") {
+    return (
+      <div>
+        <LaFestaDetail onNavigate={handleNavigate} />
       </div>
     )
   }

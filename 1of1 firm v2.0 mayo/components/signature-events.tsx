@@ -186,6 +186,7 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
     },
     {
       image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80",
+      id: "la-festa",
       title: "LA FESTA",
       subtitle: "RUMBA ÉPICA • CARNAVAL",
       dateLabel: "FECHA PRÓXIMAMENTE",
